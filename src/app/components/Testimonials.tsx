@@ -4,7 +4,7 @@ export default function Testimonials() {
       <h2 className="text-2xl font-semibold mb-6">What Our Tenants Say</h2>
       <div className="bg-white p-6 shadow-md rounded-lg">
         <p className="italic">
-          &quot;Best PG in Kozhikode! Clean rooms and amazing food.&quot;
+          'Best PG in Kozhikode! Clean rooms and amazing food.'
         </p>
         <p className="font-bold mt-2">- Rahul, Tenant</p>
       </div>
