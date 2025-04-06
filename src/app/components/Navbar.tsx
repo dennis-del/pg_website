@@ -29,7 +29,7 @@ export default function Navbar() {
           : "bg-transparent text-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center text-zinc-300">
         <h1 className="text-xl font-bold">Kozhikode PG</h1>
 
         {/* Desktop Menu */}
