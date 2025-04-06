@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full p-4 transition-all duration-500 z-50 ${
-        isScrolled ? "bg-blue-600 shadow-md text-white" : "bg-transparent text-white"
+        isScrolled
+          ? "bg-blue-600 shadow-md text-white"
+          : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -33,23 +35,23 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-4">
           <li>
-            <Link href="/" className="hover:underline">
-              Home
+            <Link href="/">
+              <span className="hover:underline">Home</span>
             </Link>
           </li>
           <li>
-            <Link href="/rooms" className="hover:underline">
-              Rooms
+            <Link href="/rooms">
+              <span className="hover:underline">Rooms</span>
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:underline">
-              About
+            <Link href="/about">
+              <span className="hover:underline">About</span>
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:underline">
-              Contact
+            <Link href="/contact">
+              <span className="hover:underline">Contact</span>
             </Link>
           </li>
         </ul>
@@ -71,23 +73,27 @@ export default function Navbar() {
       >
         <ul className="flex flex-col items-center gap-4 py-4">
           <li>
-            <Link href="/" className="hover:underline" onClick={() => setIsOpen(false)}>
-              Home
+            <Link href="/" onClick={() => setIsOpen(false)}>
+              <span className="hover:underline">Home</span>
             </Link>
           </li>
           <li>
-            <Link href="/rooms" className="hover:underline" onClick={() => setIsOpen(false)}>
-              Rooms
+            <Link href="/rooms" onClick={() => setIsOpen(false)}>
+              <span className="hover:underline">Rooms</span>
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:underline" onClick={() => setIsOpen(false)}>
-              About
+            <Link
+              href="/about"
+              className="hover:underline"
+              onClick={() => setIsOpen(false)}
+            >
+              <span className="hover:underline">About</span>
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:underline" onClick={() => setIsOpen(false)}>
-              Contact
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <span className="hover:underline">Contact</span>
             </Link>
           </li>
         </ul>
